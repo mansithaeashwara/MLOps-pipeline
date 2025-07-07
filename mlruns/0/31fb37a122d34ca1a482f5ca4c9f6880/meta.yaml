@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/BinaryLab/MLFlow/MLOps/mlruns/0/31fb37a122d34ca1a482f5ca4c9f6880/artifacts
+end_time: 1751892466257
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 31fb37a122d34ca1a482f5ca4c9f6880
+run_name: orderly-cub-635
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751892466153
+status: 4
+tags: []
+user_id: iamma

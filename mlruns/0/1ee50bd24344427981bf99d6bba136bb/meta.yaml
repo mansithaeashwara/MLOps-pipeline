@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/BinaryLab/MLFlow/MLOps/mlruns/0/1ee50bd24344427981bf99d6bba136bb/artifacts
+end_time: 1751890952721
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1ee50bd24344427981bf99d6bba136bb
+run_name: masked-shrew-286
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751890947397
+status: 3
+tags: []
+user_id: iamma

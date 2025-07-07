@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/BinaryLab/MLFlow/MLOps/mlruns/0/7893ff00e0794bfeb3e7aeade99c7595/artifacts
+end_time: 1751891874061
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7893ff00e0794bfeb3e7aeade99c7595
+run_name: youthful-hawk-825
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751891868576
+status: 3
+tags: []
+user_id: iamma

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/BinaryLab/MLFlow/MLOps/mlruns/0/models/m-0b10bd843b8b4a9a8cb32a0820eb1c15/artifacts
+creation_timestamp: 1751892543509
+experiment_id: '0'
+last_updated_timestamp: 1751892548740
+model_id: m-0b10bd843b8b4a9a8cb32a0820eb1c15
+model_type: null
+name: model1
+source_run_id: ced5a810b9904286853e7c89c458eec8
+status: 2
+status_message: null

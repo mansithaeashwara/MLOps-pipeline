@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/BinaryLab/MLFlow/MLOps/mlruns/0/fbf0bb77a3294c2e90bcaa3214730e9d/artifacts
+end_time: 1751890425636
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fbf0bb77a3294c2e90bcaa3214730e9d
+run_name: clumsy-dove-201
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751890418551
+status: 3
+tags: []
+user_id: iamma
