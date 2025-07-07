@@ -92,3 +92,234 @@ Source-Age: 0
 [2025-07-07 16:17:54,494: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2025-07-07 16:47:50,558: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-07 16:47:50,560: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:47:50,560: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:47:50,561: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:47:50,561: INFO: common: created directory at: artifacts]
+[2025-07-07 16:47:50,561: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-07 16:47:51,831: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1D51:14C420:2CD21BF:3389A0B:686BA5DA
+Accept-Ranges: bytes
+Date: Mon, 07 Jul 2025 11:17:52 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsss1830052-SIN
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1751887072.004874,VS0,VE363
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: b66123b59125006d880d9f75eb187d27787fa1c6
+Expires: Mon, 07 Jul 2025 11:22:52 GMT
+Source-Age: 0
+
+]
+[2025-07-07 16:47:51,831: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-07 16:47:51,831: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-07 16:47:51,831: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:47:51,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:47:51,845: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:47:51,845: INFO: common: created directory at: artifacts]
+[2025-07-07 16:47:51,846: ERROR: main: "'ConfigBox' object has no attribute 'data_validation'"]
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\BinaryLab\MLFlow\MLOps\main.py", line 22, in <module>
+    data_ingestion.main()
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\pipeline\stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\config\configuration.py", line 36, in get_data_validation_config
+    config = self.config.data_validation
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+[2025-07-07 16:48:18,989: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-07 16:48:18,991: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:48:18,992: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:48:18,993: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:48:18,995: INFO: common: created directory at: artifacts]
+[2025-07-07 16:48:18,995: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-07 16:48:18,995: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-07 16:48:18,997: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-07 16:48:18,997: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-07 16:48:18,999: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:48:18,999: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:48:19,001: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:48:19,001: INFO: common: created directory at: artifacts]
+[2025-07-07 16:48:19,002: ERROR: main: "'ConfigBox' object has no attribute 'data_validation'"]
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\BinaryLab\MLFlow\MLOps\main.py", line 22, in <module>
+    data_ingestion.main()
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\pipeline\stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\config\configuration.py", line 36, in get_data_validation_config
+    config = self.config.data_validation
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+[2025-07-07 16:50:17,959: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-07 16:50:17,978: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:50:17,978: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:50:17,978: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:50:17,978: INFO: common: created directory at: artifacts]
+[2025-07-07 16:50:17,978: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-07 16:50:17,978: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-07 16:50:17,984: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-07 16:50:17,984: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-07 16:50:17,987: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-07 16:50:17,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-07 16:50:17,989: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-07 16:50:17,990: INFO: common: created directory at: artifacts]
+[2025-07-07 16:50:17,994: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-07 16:50:18,021: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
