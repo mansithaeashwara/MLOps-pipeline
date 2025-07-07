@@ -1,6 +1,6 @@
-from MLOps.config.configuration import ConfigurationManager
-from MLOps.components.data_ingestion import DataIngestion
-from MLOps import logger
+from ..config.configuration import ConfigurationManager
+from ..components.data_ingestion import DataIngestion
+from .. import logger
 
 
 

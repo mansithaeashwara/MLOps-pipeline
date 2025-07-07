@@ -1,6 +1,6 @@
-from MLOps.constants import *
-from MLOps.utils.common import read_yaml, create_directories
-from MLOps.entity.config_entity import (DataIngestionConfig)
+from ..constants import *
+from ..utils.common import read_yaml, create_directories
+from ..entity.config_entity import (DataIngestionConfig)
 class ConfigurationManager:
     def __init__(
         self,

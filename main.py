@@ -1,5 +1,5 @@
-from MLOps import logger
-from MLOps.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from src.MLOps import logger
+from src.MLOps.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
 
 

@@ -1,10 +1,10 @@
 import os
 import urllib.request as request
 import zipfile
-from MLOps import logger
-from MLOps.utils.common import get_size
+from .. import logger
+from ..utils.common import get_size
 from pathlib import Path
-from MLOps.entity.config_entity import (DataIngestionConfig)
+from ..entity.config_entity import (DataIngestionConfig)
 
 
 class DataIngestion:
