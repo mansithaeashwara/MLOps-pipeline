@@ -54,16 +54,15 @@ class ModelEvaluation:
             mlflow.log_metric("r2", r2)
             mlflow.log_metric("mae", mae)
 
-            print(f"tracking {tracking_url_type_store}")
             # Model registry does not work with file store
-            # if tracking_url_type_store != "file":
-            print("Logging model to MLflow Model Registry")
-            # Register the model
-            # There are other ways to use the Model Registry, which depends on the use case,
-            # please refer to the doc for more information:
-            # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-            mlflow.sklearn.log_model(model, "model1")
-            # else:
-            #     mlflow.sklearn.log_model(model, "model")
+            if tracking_url_type_store != "file":
+
+                # Register the model
+                # There are other ways to use the Model Registry, which depends on the use case,
+                # please refer to the doc for more information:
+                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+            else:
+                mlflow.sklearn.log_model(model, "model")
 
     
