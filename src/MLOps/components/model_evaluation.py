@@ -9,6 +9,9 @@ import joblib
 from ..entity.config_entity import ModelEvaluationConfig
 from ..utils.common import save_json
 from pathlib import Path
+import dagshub
+
+import mlflow
 
 
 class ModelEvaluation:
@@ -37,6 +40,7 @@ class ModelEvaluation:
         print(f"tracking uri: {mlflow.get_tracking_uri()}")
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
+        dagshub.init(repo_owner='mansithaeashwara', repo_name='MLOps-pipeline', mlflow=True)
 
         with mlflow.start_run():
 
@@ -54,15 +58,22 @@ class ModelEvaluation:
             mlflow.log_metric("r2", r2)
             mlflow.log_metric("mae", mae)
 
-            # Model registry does not work with file store
-            if tracking_url_type_store != "file":
+            # Save model as artifact instead of using log_model
+            import tempfile
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                model_path = os.path.join(tmp_dir, "model.pkl")
+                joblib.dump(model, model_path)
+                mlflow.log_artifact(model_path, "model")
 
-                # Register the model
-                # There are other ways to use the Model Registry, which depends on the use case,
-                # please refer to the doc for more information:
-                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
-            else:
-                mlflow.sklearn.log_model(model, "model")
+            # # Model registry does not work with file store
+            # if tracking_url_type_store != "file":
+
+            #     # Register the model
+            #     # There are other ways to use the Model Registry, which depends on the use case,
+            #     # please refer to the doc for more information:
+            #     # https://mlflow.org/docs/latest/model-registry.html#api-workflow
+            #     mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+            # else:
+            #     mlflow.sklearn.log_model(model, "model")
 
     

@@ -1232,3 +1232,208 @@ Traceback (most recent call last):
   File "C:\Users\iamma\anaconda3\envs\mlops\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
     from distutils._modified import newer
 ModuleNotFoundError: No module named 'distutils._modified'
+[2025-07-08 21:53:57,769: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 21:53:57,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:53:57,810: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:53:57,821: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:53:57,823: INFO: common: created directory at: artifacts]
+[2025-07-08 21:53:57,824: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 21:53:57,824: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-08 21:53:57,828: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:53:57,829: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 21:53:57,832: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:53:57,833: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:53:57,834: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:53:57,836: INFO: common: created directory at: artifacts]
+[2025-07-08 21:53:57,836: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 21:53:57,862: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:53:57,862: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 21:53:57,873: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:53:57,874: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:53:57,877: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:53:57,877: INFO: common: created directory at: artifacts]
+[2025-07-08 21:53:57,878: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 21:53:57,902: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 21:53:57,902: INFO: data_transformation: (1199, 12)]
+[2025-07-08 21:53:57,902: INFO: data_transformation: (400, 12)]
+[2025-07-08 21:53:57,903: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:53:57,903: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 21:53:57,905: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:53:57,905: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:53:57,910: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:53:57,910: INFO: common: created directory at: artifacts]
+[2025-07-08 21:53:57,911: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 21:53:57,950: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:53:57,950: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 21:53:57,954: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:53:57,955: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:53:57,956: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:53:57,957: INFO: common: created directory at: artifacts]
+[2025-07-08 21:53:57,958: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 21:54:10,083: INFO: _client: HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"]
+[2025-07-08 21:54:11,093: INFO: _client: HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"]
+[2025-07-08 21:54:11,998: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:54:12,003: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 21:54:12,850: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 21:54:13,733: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:54:13,733: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 21:54:13,743: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 21:54:14,941: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 21:54:20,406: ERROR: main: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}]
+Traceback (most recent call last):
+  File "C:\BinaryLab\MLFlow\MLOps\main.py", line 57, in <module>
+    data_ingestion.main()
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\pipeline\stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "C:\BinaryLab\MLFlow\MLOps\src\MLOps\components\model_evaluation.py", line 70, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\sklearn\__init__.py", line 426, in log_model
+    return Model.log(
+           ^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\tracking\client.py", line 5371, in create_logged_model
+    return self._tracking_client.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\iamma\anaconda3\envs\defaultenv\Lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+[2025-07-08 21:58:11,217: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 21:58:11,220: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:58:11,221: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:58:11,224: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:58:11,224: INFO: common: created directory at: artifacts]
+[2025-07-08 21:58:11,225: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 21:58:11,225: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-08 21:58:11,228: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:58:11,229: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 21:58:11,232: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:58:11,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:58:11,236: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:58:11,236: INFO: common: created directory at: artifacts]
+[2025-07-08 21:58:11,236: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 21:58:11,258: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:58:11,259: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 21:58:11,262: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:58:11,263: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:58:11,265: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:58:11,265: INFO: common: created directory at: artifacts]
+[2025-07-08 21:58:11,265: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 21:58:11,287: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 21:58:11,287: INFO: data_transformation: (1199, 12)]
+[2025-07-08 21:58:11,287: INFO: data_transformation: (400, 12)]
+[2025-07-08 21:58:11,287: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:58:11,288: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 21:58:11,290: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:58:11,291: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:58:11,293: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:58:11,294: INFO: common: created directory at: artifacts]
+[2025-07-08 21:58:11,294: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 21:58:11,331: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:58:11,331: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 21:58:11,334: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:58:11,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:58:11,337: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:58:11,337: INFO: common: created directory at: artifacts]
+[2025-07-08 21:58:11,338: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 21:58:12,353: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:58:12,360: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 21:58:13,154: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 21:58:14,042: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:58:14,047: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 21:58:14,047: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 21:58:15,170: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 21:58:21,086: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:59:26,626: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 21:59:26,629: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:59:26,642: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:59:26,645: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:59:26,645: INFO: common: created directory at: artifacts]
+[2025-07-08 21:59:26,646: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 21:59:26,646: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-08 21:59:26,648: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:59:26,649: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 21:59:26,652: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:59:26,652: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:59:26,655: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:59:26,656: INFO: common: created directory at: artifacts]
+[2025-07-08 21:59:26,656: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 21:59:26,677: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:59:26,677: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 21:59:26,681: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:59:26,682: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:59:26,685: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:59:26,685: INFO: common: created directory at: artifacts]
+[2025-07-08 21:59:26,686: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 21:59:26,703: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 21:59:26,704: INFO: data_transformation: (1199, 12)]
+[2025-07-08 21:59:26,704: INFO: data_transformation: (400, 12)]
+[2025-07-08 21:59:26,704: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:59:26,705: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 21:59:26,707: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:59:26,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:59:26,711: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:59:26,711: INFO: common: created directory at: artifacts]
+[2025-07-08 21:59:26,712: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 21:59:26,747: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 21:59:26,748: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 21:59:26,751: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 21:59:26,751: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 21:59:26,754: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 21:59:26,754: INFO: common: created directory at: artifacts]
+[2025-07-08 21:59:26,754: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 21:59:27,578: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:59:27,594: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 21:59:28,380: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 21:59:29,134: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 21:59:29,137: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 21:59:29,139: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 21:59:30,146: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 21:59:35,720: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
