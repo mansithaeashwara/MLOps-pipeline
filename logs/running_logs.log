@@ -1437,3 +1437,243 @@ x==========x]
 [2025-07-08 21:59:35,720: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
 
 x==========x]
+[2025-07-08 22:06:15,557: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 22:06:15,562: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:06:15,563: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:06:15,565: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:06:15,566: INFO: common: created directory at: artifacts]
+[2025-07-08 22:06:15,567: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 22:06:15,567: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-08 22:06:15,570: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:06:15,571: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 22:06:15,574: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:06:15,575: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:06:15,577: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:06:15,578: INFO: common: created directory at: artifacts]
+[2025-07-08 22:06:15,578: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 22:06:15,598: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:06:15,598: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 22:06:15,604: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:06:15,604: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:06:15,607: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:06:15,608: INFO: common: created directory at: artifacts]
+[2025-07-08 22:06:15,608: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 22:06:15,626: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 22:06:15,626: INFO: data_transformation: (1199, 12)]
+[2025-07-08 22:06:15,626: INFO: data_transformation: (400, 12)]
+[2025-07-08 22:06:15,626: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:06:15,626: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 22:06:15,632: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:06:15,632: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:06:15,636: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:06:15,637: INFO: common: created directory at: artifacts]
+[2025-07-08 22:06:15,637: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 22:06:15,676: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:06:15,676: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 22:06:15,678: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:06:15,681: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:06:15,682: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:06:15,683: INFO: common: created directory at: artifacts]
+[2025-07-08 22:06:15,683: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 22:06:16,806: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:06:16,813: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 22:06:17,597: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 22:06:18,355: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:06:18,359: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 22:06:18,359: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 22:06:19,628: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 22:06:27,610: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:12:27,127: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.8.102:8080]
+[2025-07-08 22:12:27,127: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-08 22:12:34,037: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:34] "GET / HTTP/1.1" 200 -]
+[2025-07-08 22:12:34,272: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:34] "GET /static/css2/nunito-font.css HTTP/1.1" 200 -]
+[2025-07-08 22:12:34,276: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:34] "GET /static/css2/style.css HTTP/1.1" 200 -]
+[2025-07-08 22:12:34,288: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:34] "GET /static/css/styles.css HTTP/1.1" 200 -]
+[2025-07-08 22:12:34,298: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:34] "GET /static/js/scripts.js HTTP/1.1" 200 -]
+[2025-07-08 22:12:35,575: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:35] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2025-07-08 22:12:35,587: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:35] "GET /static/assets/img/form-v9.jpg HTTP/1.1" 200 -]
+[2025-07-08 22:12:35,609: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:35] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2025-07-08 22:12:35,627: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:35] "GET /static/assets/favicon.ico HTTP/1.1" 200 -]
+[2025-07-08 22:12:37,193: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:12:37] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -]
+[2025-07-08 22:12:48,192: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 22:12:48,195: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:12:48,196: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:12:48,199: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:12:48,200: INFO: common: created directory at: artifacts]
+[2025-07-08 22:12:48,200: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 22:12:50,133: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1095:16408E:8776:97AA:686D4A84
+Accept-Ranges: bytes
+Date: Tue, 08 Jul 2025 16:42:50 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsss1830025-SIN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1751992970.832575,VS0,VE331
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 25f817795dedc834137249a2a73f25970a0264d9
+Expires: Tue, 08 Jul 2025 16:47:50 GMT
+Source-Age: 0
+
+]
+[2025-07-08 22:12:50,154: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:12:50,154: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 22:12:50,160: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:12:50,161: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:12:50,165: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:12:50,165: INFO: common: created directory at: artifacts]
+[2025-07-08 22:12:50,166: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 22:12:50,192: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:12:50,192: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 22:12:50,197: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:12:50,198: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:12:50,201: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:12:50,202: INFO: common: created directory at: artifacts]
+[2025-07-08 22:12:50,203: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 22:12:50,230: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 22:12:50,231: INFO: data_transformation: (1199, 12)]
+[2025-07-08 22:12:50,231: INFO: data_transformation: (400, 12)]
+[2025-07-08 22:12:50,231: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:12:50,232: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 22:12:50,236: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:12:50,237: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:12:50,240: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:12:50,241: INFO: common: created directory at: artifacts]
+[2025-07-08 22:12:50,242: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 22:12:50,284: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:12:50,284: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 22:12:50,288: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:12:50,289: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:12:50,291: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:12:50,292: INFO: common: created directory at: artifacts]
+[2025-07-08 22:12:50,293: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 22:12:51,417: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:12:51,432: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 22:12:52,575: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 22:12:53,375: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:12:53,378: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 22:12:53,379: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 22:12:54,271: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 22:13:00,044: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:13:00,471: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:13:00] "GET /train HTTP/1.1" 200 -]
+[2025-07-08 22:13:00,738: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:13:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-07-08 22:20:56,324: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "GET / HTTP/1.1" 200 -]
+[2025-07-08 22:20:56,371: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,376: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/css2/nunito-font.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,376: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/css2/style.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,380: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,688: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2025-07-08 22:20:56,690: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,699: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -]
+[2025-07-08 22:20:56,699: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:20:56] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2025-07-08 22:20:58,708: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-08 22:20:58,714: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:20:58,716: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:20:58,719: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:20:58,719: INFO: common: created directory at: artifacts]
+[2025-07-08 22:20:58,719: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-08 22:20:58,719: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-08 22:20:58,722: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:20:58,722: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-08 22:20:58,725: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:20:58,725: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:20:58,729: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:20:58,729: INFO: common: created directory at: artifacts]
+[2025-07-08 22:20:58,729: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-08 22:20:58,757: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:20:58,757: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-08 22:20:58,757: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:20:58,757: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:20:58,765: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:20:58,765: INFO: common: created directory at: artifacts]
+[2025-07-08 22:20:58,765: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-08 22:20:58,785: INFO: data_transformation: Splited data into training and test sets]
+[2025-07-08 22:20:58,785: INFO: data_transformation: (1199, 12)]
+[2025-07-08 22:20:58,785: INFO: data_transformation: (400, 12)]
+[2025-07-08 22:20:58,785: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:20:58,787: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-08 22:20:58,789: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:20:58,789: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:20:58,791: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:20:58,791: INFO: common: created directory at: artifacts]
+[2025-07-08 22:20:58,793: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-08 22:20:58,825: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:20:58,825: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-08 22:20:58,832: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-08 22:20:58,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-08 22:20:58,836: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-08 22:20:58,837: INFO: common: created directory at: artifacts]
+[2025-07-08 22:20:58,837: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-08 22:20:59,808: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:20:59,811: INFO: helpers: Accessing as mansithaeashwara]
+[2025-07-08 22:21:00,604: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/mansithaeashwara/MLOps-pipeline "HTTP/1.1 200 OK"]
+[2025-07-08 22:21:01,331: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-07-08 22:21:01,341: INFO: helpers: Initialized MLflow to track repo "mansithaeashwara/MLOps-pipeline"]
+[2025-07-08 22:21:01,341: INFO: helpers: Repository mansithaeashwara/MLOps-pipeline initialized!]
+[2025-07-08 22:21:02,384: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2025-07-08 22:21:07,978: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2025-07-08 22:21:08,435: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:21:08] "GET /train HTTP/1.1" 200 -]
+[2025-07-08 22:23:49,761: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:49] "POST /predict HTTP/1.1" 200 -]
+[2025-07-08 22:23:49,799: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:49,801: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:49] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:49,971: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:49] "[33mGET /static/assets/img/wine.gif HTTP/1.1[0m" 404 -]
+[2025-07-08 22:23:49,976: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:49] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,164: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "GET / HTTP/1.1" 200 -]
+[2025-07-08 22:23:53,205: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,207: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/css2/nunito-font.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,209: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/css2/style.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,211: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,308: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[33mGET /static/assets/img/wine.jpg HTTP/1.1[0m" 404 -]
+[2025-07-08 22:23:53,311: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/assets/img/form-v9.jpg HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,318: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -]
+[2025-07-08 22:23:53,319: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:23:53] "[33mGET /static/fonts/Nunito/Nunito-Bold.ttf HTTP/1.1[0m" 404 -]
+[2025-07-08 22:24:18,901: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:24:18] "POST /predict HTTP/1.1" 200 -]
+[2025-07-08 22:24:18,931: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:24:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -]
+[2025-07-08 22:24:18,931: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:24:18] "[36mGET /static/js/scripts.js HTTP/1.1[0m" 304 -]
+[2025-07-08 22:24:19,099: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:24:19] "[33mGET /static/assets/img/wine.gif HTTP/1.1[0m" 404 -]
+[2025-07-08 22:24:19,103: INFO: _internal: 127.0.0.1 - - [08/Jul/2025 22:24:19] "[36mGET /static/assets/favicon.ico HTTP/1.1[0m" 304 -]
